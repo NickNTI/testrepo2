@@ -1,0 +1,230 @@
+/* ========================================
+   GRUNDLÄGGANDE STIL
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f3f4f6;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+header {
+    background: #1f2937;
+    color: white;
+    padding: 20px 0;
+}
+
+/*
+   Flexbox används här för att placera
+   rubriken och menyn bredvid varandra.
+*/
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   INTRODUKTION
+   ======================================== */
+
+.hero {
+    margin: 30px 0;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-top: 0;
+}
+
+
+/* ========================================
+   KORTEN
+   ======================================== */
+
+/*
+   Vi använder Flexbox istället för Grid.
+
+   flex-wrap: wrap betyder att elementen
+   får flytta ner till nästa rad om det
+   inte finns tillräckligt med plats.
+*/
+.content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    /*
+       flex: 1 betyder att korten försöker
+       dela på det tillgängliga utrymmet.
+    */
+    flex: 1;
+    min-width: 200px;
+
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+
+/* ========================================
+   DEMO-OMRÅDE
+   ======================================== */
+
+.demo {
+    margin: 30px 0;
+    padding: 30px;
+    background: #dbeafe;
+    border-radius: 10px;
+}
+
+.screen-message {
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    padding: 25px;
+    background: #1f2937;
+    color: white;
+    text-align: center;
+}
+
+
+/* ========================================
+   RESPONSIVITET
+   ======================================== */
+
+/*
+   MEDIA QUERY
+
+   Den här koden används när skärmen
+   är 650 pixlar bred eller mindre.
+
+   Testa att ändra 650px till exempelvis
+   800px eller 500px och se vad som händer.
+*/
+@media (max-width: 650px) {
+
+    /*
+       Rubriken och menyn placeras
+       under varandra.
+    */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /*
+       Menyn får plats på flera rader
+       om det behövs.
+    */
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    /*
+       Korten får hela radens bredd.
+
+       Flexbox används fortfarande,
+       men vi ändrar riktningen från
+       rad till kolumn.
+    */
+    .content {
+        flex-direction: column;
+    }
+
+    .card {
+        min-width: 0;
+    }
+
+    /*
+       Mindre padding ger mer plats
+       åt innehållet på små skärmar.
+    */
+    .hero {
+        padding: 25px 20px;
+    }
+
+    .demo {
+        padding: 20px;
+    }
+}
+
+
+/* ========================================
+   EXTRA TYDLIG DEMONSTRATION
+   ======================================== */
+
+/*
+   På små skärmar ändras även texten
+   och meddelandet så att eleverna
+   tydligt kan se att media queryn fungerar.
+*/
+
+@media (max-width: 400px) {
+
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+
+    .screen-message {
+        font-size: 0.9rem;
+    }
+}

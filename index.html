@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsivitet med Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <h1>Min hemsida</h1>
+
+            <nav>
+                <a href="#">Hem</a>
+                <a href="#">Om oss</a>
+                <a href="#">Projekt</a>
+                <a href="#">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h2>Responsiv design med Flexbox</h2>
+            <p>
+                Ändra storleken på webbläsarfönstret och se hur
+                hemsidan anpassar sig till skärmen.
+            </p>
+        </section>
+
+        <section class="content">
+            <article class="card">
+                <h3>Stor skärm</h3>
+                <p>
+                    På en stor skärm kan innehållet ligga bredvid
+                    varandra eftersom det finns gott om plats.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Liten skärm</h3>
+                <p>
+                    När skärmen blir smalare flyttas innehållet
+                    under varandra så att det blir lättare att läsa.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Responsivitet</h3>
+                <p>
+                    CSS kan ändra layouten beroende på hur bred
+                    skärmen är.
+                </p>
+            </article>
+        </section>
+
+        <section class="demo">
+            <h2>Prova själv!</h2>
+            <p>
+                Öppna webbläsarens utvecklarverktyg och växla mellan
+                dator- och mobilvy, eller ändra storleken på fönstret.
+            </p>
+
+            <p class="screen-message">
+                👋 Jag ändrar utseende när skärmen blir mindre!
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Exempel på responsiv webbdesign</p>
+    </footer>
+
+</body>
+</html>
